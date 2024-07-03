@@ -1,5 +1,6 @@
 package pe.edu.cibertec.DSWII_T3_YayaJean.model.bd;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -21,6 +22,7 @@ public class Especialidad {
     private Double costo;
 
     @OneToMany(mappedBy = "especialidad")
+    @JsonManagedReference
     private Set<Alumno> alumnos;
 
 

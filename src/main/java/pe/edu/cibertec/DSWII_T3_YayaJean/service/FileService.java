@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class FileService implements IFileService {
 
-    private final Path pathFolder = Paths.get("uploads");
+    private final Path pathFolder = Paths.get("Documentos");
 
     @Override
     public void guardarArchivo(MultipartFile archivo) throws Exception {

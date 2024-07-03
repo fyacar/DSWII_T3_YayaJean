@@ -1,5 +1,7 @@
 package pe.edu.cibertec.DSWII_T3_YayaJean.model.bd;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,12 +21,15 @@ public class Alumno {
 
     @ManyToOne
     @JoinColumn(name = "idEsp")
+    @JsonBackReference
     private Especialidad especialidad;
 
     @OneToMany(mappedBy = "alumno")
+    @JsonManagedReference
     private Set<Notas> notas;
 
     @OneToMany(mappedBy = "alumno")
+    @JsonManagedReference
     private Set<Pagos> pagos;
 
 }
