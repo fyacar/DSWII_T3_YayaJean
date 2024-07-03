@@ -15,7 +15,8 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import pe.edu.cibertect.api_rest_ventas.service.DetalleUsuarioService;
+import pe.edu.cibertec.DSWII_T3_YayaJean.service.DetalleUsuarioService;
+
 
 @AllArgsConstructor
 @EnableMethodSecurity
